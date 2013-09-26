@@ -2,7 +2,7 @@
 #include <setjmp.h>
 #include <stdlib.h>
 
-#include "../include/cmockery.h"
+#include "cmockery.h"
 #include "palindrome.h"
 
 void is_palindrome(char* str) {
