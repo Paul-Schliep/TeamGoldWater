@@ -11,24 +11,14 @@ char* disemvowel(char* str) {
   for (i = 0; i < len; ++i) {
     cloneStr[i] = str[i];
   }
-  //for (i = 0; i < len; ++i) {
-  //  if (strchr(vowels, cloneStr[i]) != NULL) {
-  //    // check for null char
-  //    shiftLeft(cloneStr, i);
-  //    i = i-1;
-  //  }
-  //}
-  i = 0;
-  while(i < len){
+  for (i = len - 1; i >= 0; --i) {
     if (strchr(vowels, cloneStr[i]) != NULL) {
       // check for null char
       shiftLeft(cloneStr, i);
       //i = i-1;
-    } 
-    i++;
-  } 
-  
-  return cloneStr;
+   }
+ }
+ return cloneStr;
 }
 
 void shiftLeft(char* str, int index) {
@@ -36,5 +26,4 @@ void shiftLeft(char* str, int index) {
   for(i = index; i <= strlen(str); ++i) {
     str[i] = str[i + 1];
   }
-
 }
