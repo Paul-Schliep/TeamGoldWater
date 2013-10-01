@@ -8,6 +8,6 @@
 void mergesort(int size, int values[]);
 void mergesortRange(int values[], int startIndex, int endIndex);
 void mergeRanges(int values[], int startIndex, int midPoint, int endIndex);
-int needsSorting(int rangeSize);
+bool needsSorting(int rangeSize);
 
 #endif
